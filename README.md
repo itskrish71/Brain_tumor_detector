@@ -1,6 +1,6 @@
 # Brain_tumor_detector
 ## Intentions:
-### Purpose of this model is to live detect Brain Tumor which affects approx. 90,000 people in US alone. With help of Brain_Tumor_detector, anyone can access the techonology to detect the tumor, further determining which type of tumor is in affect helping professionals predicting the tumor with highest accuracy.
+### Purpose of this model is to live detect Brain Tumor which affects approx. 90,000 people in US alone. With help of Brain_Tumor_detector, anyone can access the techonology to detect the tumor, further determining which type of tumor is in affect helping professionals predicting the tumor with highest accuracy. Each year, approximately 70,000-200,000 patients are diagnosed with brain metastases (metastatic brain tumors/secondary brain tumors), while ~100,000 will die every year as the result of brain metastases. This project aims to reduce those numbers. SRC: https://braintumor.org/brain-tumors/about-brain-tumors/brain-tumor-facts/
 ## Procedure: 
 ### --> Data Handling and Preparation
 #### 1. Loading the required datasets is essential. Making a seperate cell for the dedicated purpose would be convinient. 
@@ -18,3 +18,9 @@
 #### 3. Updating the classifier is necessary cause original model has final layer designed to output 1000 scores. 
 
 ### --> Model Training and Classification
+#### 1. Set up the GPU, 'mps' if working with macos, 'cuda' also works.
+#### 2. Define Loss fucntion and Optimizer. BCEWithLogitsLoss() is best for binary classification. 
+#### 4. Train the model. Make sure to have 25 to 30 epochs so that the model train to its full potential. Valdate the model's performance. make sure to tell pytorch not to calculate gradients, hence resulting in less memory usage. 
+
+### Performance Visualisation
+#### matplotlib helps you visualise the result with the help of graphs(Training vs Validation graph) and also confusion matrix. 
